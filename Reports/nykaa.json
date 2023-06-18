@@ -1,0 +1,62 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2023-06-18T16:29:45.738Z",
+        "line": 6,
+        "name": "User login into the website",
+        "description": "",
+        "id": "testing-the-product-purchasing-in-nykaa;user-login-into-the-website",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5422677500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User launch the application",
+            "match": {
+              "location": "com.NykaaCucumber_IPT.stepDef.StepDefinition.user_launch_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1837217700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User click the signIn option",
+            "match": {
+              "location": "com.NykaaCucumber_IPT.stepDef.StepDefinition.user_click_the_sign_in_option()"
+            },
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegressionTest"
+          }
+        ]
+      }
+    ],
+    "name": "Testing the Product purchasing in Nykaa",
+    "description": "  I want to use this template for my feature file",
+    "id": "testing-the-product-purchasing-in-nykaa",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/com/feature/Nykaa.feature",
+    "tags": [
+      {
+        "name": "@RegressionTest",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
