@@ -56,29 +56,14 @@ public abstract class BaseClass {
 	}
 
 	public static void input(WebElement element, String value) {
-
-		try {
-			if (elementDisplayed(element)) {
-				element.sendKeys(value);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
+		element.sendKeys(value);
 	}
 
 	public static void clickOnElement(WebElement element) {
-		try {
-			if (elementDisplayed(element)) {
-				element.click();
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
+		element.click();
 	}
 
-	public static void screenshot(String name) {
+	public static void screenshot() {
 
 		DateTimeFormatter dateFormatted = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
 		LocalDateTime date = LocalDateTime.now();
@@ -88,7 +73,7 @@ public abstract class BaseClass {
 			File src = ts.getScreenshotAs(OutputType.FILE);
 			// File dest = new File(System.getProperty("user.dir") + "\\screenshots\\" +
 			// fileName + ".png");
-			File dest = new File("D:\\Avadi\\workspace1\\NykaaMaven_IPT\\screenshots\\" + fileName + ".png");
+			File dest = new File(".\\screenshots\\" + fileName + ".png");
 
 			FileHandler.copy(src, dest);
 		} catch (Exception e) {
@@ -99,25 +84,12 @@ public abstract class BaseClass {
 
 	public static void mouseHover(WebElement element) {
 		Actions a = new Actions(driver);
-		try {
-			if (elementDisplayed(element)) {
-
-				a.moveToElement(element).build().perform();
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		a.moveToElement(element).build().perform();
 	}
 
 	public static void dragAndDrop(WebElement src, WebElement dest) {
 		Actions a = new Actions(driver);
-		try {
-			if ((elementDisplayed(src)) && (elementDisplayed(dest))) {
-				a.dragAndDrop(src, dest).build().perform();
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		a.dragAndDrop(src, dest).build().perform();
 	}
 
 	public static void confirmAlert(WebElement element, String condition) {
@@ -174,23 +146,13 @@ public abstract class BaseClass {
 			}
 		}
 	}
-	
+
 	public static void switchWindow(int index) {
 		Set<String> all_tab_id = driver.getWindowHandles();
 		List<String> tab_id_list = new LinkedList<>(all_tab_id);
-		
 		driver.switchTo().window(tab_id_list.get(index));
-		
 	}
 
-//		public static String getWindowId() {
-	//
-//			Set<String> all_Id = driver.getWindowHandles();
-//			Iterator<String> itr = all_Id.iterator();
-//			
-//			
-//			return windowId;
-//		}
 
 	public static void implicitWait() {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
