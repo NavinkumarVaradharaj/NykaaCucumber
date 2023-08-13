@@ -107,8 +107,7 @@ public class StepDefinition extends BaseClass {
 	public void user_able_to_enter_cvv_number() {
 	    clickOnElement(PageObjectManager.getPom().getPayment_page().getCvv_input());
 	    input(PageObjectManager.getPom().getPayment_page().getCvv_input(), "123");
-	    
-	    
+	   
 	}
 
 	@When("user able to pay using credit card")
