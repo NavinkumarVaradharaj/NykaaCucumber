@@ -129,7 +129,9 @@ public class StepDefinition extends BaseClass {
 
 	@When("user edit the bag details")
 	public void user_edit_the_bag_details() {
-		clickOnElement(PageObjectManager.getPom().getPayment_page().getEdit_bag());	}
+		clickOnElement(PageObjectManager.getPom().getPayment_page().getEdit_bag());
+		
+	}
 
 	@When("user removes the product from the bag")
 	public void user_removes_the_product_from_the_bag() {
