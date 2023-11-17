@@ -63,6 +63,13 @@ public abstract class BaseClass {
 		element.click();
 	}
 
+
+
+
+
+
+
+	
 	public static void screenshot() {
 
 		DateTimeFormatter dateFormatted = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
